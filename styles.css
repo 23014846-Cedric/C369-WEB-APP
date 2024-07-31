@@ -1,0 +1,673 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc; /* Light background for better contrast */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 15px 30px; /* Increased padding for a more spacious look */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Slightly larger shadow for better depth */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    margin-right: 25px; /* Increased margin for better spacing */
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px; /* Slightly more padding for better click area */
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 4px; /* Ensure rounded corners for all nav links */
+}
+
+nav a:hover{
+    color: #ffffff;
+    background-color: #007bff; /* Updated to a consistent blue */
+}
+
+nav .login,
+nav .signup {
+    float: right;
+    margin-left: 25px; /* Consistent spacing */
+}
+
+/* Add this to prevent highlighting of login button */
+.no-highlight {
+    background-color: #ffffff;
+    color: #333;
+}
+
+.no-highlight:hover,
+.no-highlight.active {
+    color: #333;
+    background-color: #ffffff;
+    cursor: default;
+}
+
+/* Sections Styles */
+section {
+    padding: 80px 20px 20px; /* Increased top padding to account for fixed header */
+    margin-top: 60px; /* Space for the fixed header */
+}
+
+/* Welcome Section */
+.welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+    background-color: #007bff; /* Consistent blue background */
+}
+
+.welcome-container {
+    text-align: center;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow for a more prominent effect */
+}
+
+.sign-in-form {
+    margin-top: 20px;
+}
+
+.sign-in-form h2 {
+    margin-bottom: 15px; /* Increased margin for better separation */
+    color: #333;
+}
+
+.sign-in-form label {
+    display: block;
+    margin-bottom: 8px; /* Slightly larger margin for readability */
+    color: #666; /* Slightly lighter color for labels */
+}
+
+.sign-in-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.sign-in-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px; /* Increased font size for better readability */
+}
+
+.sign-in-form a {
+    color: #007bff;
+}
+
+/* Wallet Section */
+.wallet-section {
+    background-color: #f7f9fc;
+    padding: 80px 20px;
+    text-align: center; /* Center align overall section content */
+}
+
+.wallet-container {
+    max-width: 600px;
+    margin: 0 auto; /* Center container */
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Text inside the card is left-aligned */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items in the card */
+}
+
+.wallet-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align heading and button */
+    margin-bottom: 20px;
+}
+
+.wallet-header h2 {
+    margin: 0;
+    color: #333;
+}
+
+.wallet-header button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.wallet-header button:hover {
+    background-color: #0056b3;
+}
+
+.card-details {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.card-details img {
+    width: 150px;
+    margin-right: 20px; /* Space between image and text */
+}
+
+.card-details p {
+    font-size: 18px;
+    color: #333;
+}
+
+.wallet-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%; /* Full width for action buttons */
+}
+
+.wallet-actions button {
+    padding: 12px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.wallet-actions button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Send Money Section */
+.send-money-section {
+    background-color: #ffffff;
+    padding: 60px 20px; /* Increased padding for a spacious look */
+    text-align: center;
+}
+
+.send-money-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.send-money-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.send-money-form input,
+.send-money-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.send-money-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Transaction History Section */
+.transaction-history-section {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.transaction-history-container {
+    max-width: 900px; /* Increased width for larger tables */
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.transaction-history-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transaction-history-container th,
+.transaction-history-container td {
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.transaction-history-container th {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+/* Contact Us Section */
+.contact-us-section {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-us-container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contact-us-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.contact-us-form input,
+.contact-us-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-us-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Features Section */
+.features-section {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.features-container {
+    max-width: 900px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    width: 30%;
+    margin-bottom: 20px;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.feature img {
+    width: 80px; /* Adjusted width for feature icons */
+    margin-bottom: 15px;
+}
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.popup-content h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.close-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Sign Up Section */
+.signup-section {
+    background-color: #f7f9fc;
+    padding: 80px 20px; /* Increased padding for better spacing */
+    text-align: center;
+}
+
+.signup-container {
+    max-width: 500px; /* Adjusted to a more appropriate width for the card */
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for card effect */
+    text-align: left;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.sign-up-form {
+    margin: 0;
+}
+
+.sign-up-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.sign-up-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.sign-up-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sign-up-form button:hover {
+    background-color: #0056b3; /* Darker blue for hover effect */
+}
+
+.sign-up-form p {
+    margin-top: 10px;
+}
+
+.sign-up-form a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.sign-up-form a:hover {
+    text-decoration: underline;
+}
+
+/* Login Section */
+.login-section {
+    background-color: #f7f9fc;
+    padding: 80px 20px; /* Increased padding for better spacing */
+    text-align: center;
+}
+
+.login-container {
+    max-width: 400px; /* Adjusted to a more appropriate width for the card */
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for card effect */
+    text-align: left;
+    margin-top: 20px; /* Added margin to separate from top of section */
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.sign-in-form {
+    margin: 0;
+}
+
+.sign-in-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.sign-in-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.sign-in-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.sign-in-form button:hover {
+    background-color: #0056b3; /* Darker blue for hover effect */
+}
+
+.sign-in-form p {
+    margin-top: 10px;
+}
+
+.sign-in-form a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.sign-in-form a:hover {
+    text-decoration: underline;
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.popup-content {
+    background-color: #ffffff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.popup-content h2 {
+    margin-top: 0;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.close-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Payment Section */
+.payment-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 40px;
+    background-color: #f9f9f9;
+}
+
+.payment-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.payment-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.payment-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.payment-container input,
+.payment-container textarea,
+.payment-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.payment-container button {
+    padding: 10px;
+    background-color: #00aaff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.payment-container button:hover {
+    background-color: #007bb5;
+}
+

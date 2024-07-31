@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZpay - Wallet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="wallet.html" class="nav-link">Wallet</a>
+            <a href="send-money.html" class="nav-link">Send Money</a>
+            <a href="payment.html" class="nav-link">Payment</a>
+            <a href="transactions.html" class="nav-link active">Transactions</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="features.html" class="nav-link">Features</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Wallet Section -->
+        <section class="wallet-section">
+            <div class="wallet-container">
+                <div class="card">
+                    <div class="wallet-header">
+                        <h2>Wallet</h2>
+                        <button onclick="window.location.href='change-card.html'">Change Card</button>
+                    </div>
+                    <div class="card-details">
+                        <img src="images/Creditcard.png" alt="Card">
+                        <p>Available Balance: <strong>$1,234</strong></p>
+                    </div>
+                    <div class="wallet-actions">
+                        <button onclick="window.location.href='send-money.html'">Transfer</button>
+                        <button onclick="window.location.href='payment.html'">Payment</button>
+                        <button onclick="window.location.href='transactions.html'">Transactions</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

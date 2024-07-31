@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZpay - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="contact.html" class="nav-link active">Contact</a>
+            <a href="features.html" class="nav-link">Features</a>
+            <a href="login.html" class="login">Login</a>
+            <a href="signup.html" class="signup">Sign Up</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Login Section -->
+        <section class="login-section">
+            <div class="login-container">
+                <div class="card">
+                    <form class="sign-in-form" onsubmit="event.preventDefault(); welcomeUser();">
+                        <h2>Sign In</h2>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                        <button type="submit">Sign In</button>
+                        <p>Need an account? <a href="signup.html">Sign Up</a></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Welcome Popup -->
+    <div id="welcome-popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <h2>Welcome Back!</h2>
+        </div>
+    </div>
+
+    <script>
+        function welcomeUser() {
+            // Show the welcome popup
+            document.getElementById('welcome-popup').style.display = 'block';
+
+            // Automatically redirect to wallet.html after a short delay
+            setTimeout(() => {
+                window.location.href = 'wallet.html';
+            }, 2000); 
+        }
+
+        function closePopup() {
+            document.getElementById('welcome-popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
