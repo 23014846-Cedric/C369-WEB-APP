@@ -29,6 +29,7 @@
                     <select id="select-card">
                         <option value="card1">Card 1</option>
                         <option value="card2">Card 2</option>
+                        <option value="card3">Card 3</option>
                     </select>
                     <label for="send-amount">Send Amount</label>
                     <input type="number" id="send-amount" placeholder="Enter amount" required>
@@ -165,7 +166,7 @@
                 userId: receiverUsername,
                 amount: sendAmount,
                 currency: currency,
-                description: `Sent using ${selectCard}, Random Number: ${generatedRandomNumber}`
+                description: `Remmitance ${selectCard}`
             };
 
             let transactions = JSON.parse(localStorage.getItem('transactions')) || [];

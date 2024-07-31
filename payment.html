@@ -25,6 +25,14 @@
             <div class="payment-container">
                 <form id="payment-form" onsubmit="handlePayment(event)">
                     <h2>Make a Payment</h2>
+
+                    <label for="select-card">Select Card</label>
+                    <select id="select-card">
+                        <option value="card1">Card 1</option>
+                        <option value="card2">Card 2</option>
+                        <option value="card3">Card 3</option>
+                    </select>
+
                     <label for="recipient">Recipient Username:</label>
                     <input type="text" id="recipient" placeholder="Enter recipient's username" required>
                     
@@ -169,5 +177,8 @@ function handlePayment(event) {
 }
 
     </script>
+<footer>
+    <p>&copy; 2024 EZpay. All rights reserved.</p>
+</footer>
 </body>
 </html>

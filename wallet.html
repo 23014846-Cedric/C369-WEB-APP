@@ -26,11 +26,15 @@
                 <div class="card">
                     <div class="wallet-header">
                         <h2>Wallet</h2>
-                        <button onclick="window.location.href='change-card.html'">Change Card</button>
+                        <select id="card-select" onchange="updateBalance()">
+                            <option value="1234" data-balance="1234">Card 1</option>
+                            <option value="5678" data-balance="5678">Card 2</option>
+                            <option value="9101" data-balance="9101">Card 3</option>
+                        </select>
                     </div>
                     <div class="card-details">
                         <img src="images/Creditcard.png" alt="Card">
-                        <p>Available Balance: <strong>$1,234</strong></p>
+                        <p>Available Balance: <strong id="balance-display">$1,234</strong></p>
                     </div>
                     <div class="wallet-actions">
                         <button onclick="window.location.href='send-money.html'">Transfer</button>
@@ -42,6 +46,16 @@
         </section>
     </main>
 
-    <script src="script.js"></script>
+    <script>
+        function updateBalance() {
+            const cardSelect = document.getElementById('card-select');
+            const selectedOption = cardSelect.options[cardSelect.selectedIndex];
+            const newBalance = selectedOption.getAttribute('data-balance');
+            document.getElementById('balance-display').textContent = `$${newBalance}`;
+        }
+    </script>
+<footer>
+    <p>&copy; 2024 EZpay. All rights reserved.</p>
+</footer>
 </body>
 </html>

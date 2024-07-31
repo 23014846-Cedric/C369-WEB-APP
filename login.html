@@ -36,27 +36,17 @@
         </section>
     </main>
 
-    <!-- Welcome Popup -->
-    <div id="welcome-popup" class="popup" style="display: none;">
-        <div class="popup-content">
-            <h2>Welcome Back!</h2>
-        </div>
-    </div>
-
     <script>
         function welcomeUser() {
-            // Show the welcome popup
-            document.getElementById('welcome-popup').style.display = 'block';
-
-            // Automatically redirect to wallet.html after a short delay
+            // Redirect to wallet.html after a short delay
             setTimeout(() => {
                 window.location.href = 'wallet.html';
-            }, 2000); 
-        }
-
-        function closePopup() {
-            document.getElementById('welcome-popup').style.display = 'none';
+            }, 1000); 
         }
     </script>
+<footer>
+    <p>&copy; 2024 EZpay. All rights reserved.</p>
+</footer>
 </body>
 </html>
+
