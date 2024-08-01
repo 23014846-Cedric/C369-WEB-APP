@@ -38,15 +38,22 @@
 
     <script>
         function welcomeUser() {
-            // Redirect to wallet.html after a short delay
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Store the email and password in local storage
+            localStorage.setItem('userEmail', email);
+            localStorage.setItem('userPassword', password);
+
+            // Redirect to profile.html after a short delay
             setTimeout(() => {
                 window.location.href = 'wallet.html';
-            }, 1000); 
+            }, 1000);
         }
     </script>
-<footer>
-    <p>&copy; 2024 EZpay. All rights reserved.</p>
-</footer>
+    
+    <footer>
+        <p>&copy; 2024 EZpay. All rights reserved.</p>
+    </footer>
 </body>
 </html>
-

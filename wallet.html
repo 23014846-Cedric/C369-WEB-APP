@@ -10,9 +10,9 @@
     <header>
         <nav>
             <a href="index.html" class="nav-link">Home</a>
-            <a href="wallet.html" class="nav-link">Wallet</a>
-            <a href="send-money.html" class="nav-link">Remmitance</a>
-            <a href="payment.html" class="nav-link active">Payment</a>
+            <a href="wallet.html" class="nav-link active">Wallet</a>
+            <a href="send-money.html" class="nav-link">Remittance</a>
+            <a href="payment.html" class="nav-link">Payment</a>
             <a href="transactions.html" class="nav-link">Transactions</a>
             <a href="contact.html" class="nav-link">Contact</a>
             <a href="features.html" class="nav-link">Features</a>
@@ -20,31 +20,39 @@
     </header>
 
     <main>
+        <!-- Sidebar Section -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <img src="images\Creditcard.png" alt="credit card">
+                <h3>Balance</h3>
+                <p>$1550.56</p>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="send-money.html">Remmit Money</a></li>
+                    <li><a href="wallet.html">Wallet</a></li>
+                    <li><a href="transactions.html">History</a></li>
+                </ul>
+            </nav>
+        </aside>
+
         <!-- Wallet Section -->
         <section class="wallet-section">
-            <div class="wallet-container">
-                <div class="card">
-                    <div class="wallet-header">
-                        <h2>Wallet</h2>
-                        <select id="card-select" onchange="updateBalance()">
-                            <option value="1234" data-balance="1234">Card 1</option>
-                            <option value="5678" data-balance="5678">Card 2</option>
-                            <option value="9101" data-balance="9101">Card 3</option>
-                        </select>
-                    </div>
-                    <div class="card-details">
-                        <img src="images/Creditcard.png" alt="Card">
-                        <p>Available Balance: <strong id="balance-display">$1,234</strong></p>
-                    </div>
-                    <div class="wallet-actions">
-                        <button onclick="window.location.href='send-money.html'">Remmitance</button>
-                        <button onclick="window.location.href='payment.html'">Payment</button>
-                        <button onclick="window.location.href='transactions.html'">Transactions</button>
-                    </div>
-                </div>
+            <div class="wallet-header">
+                <h2>Wallet</h2>
+                <button class="add-money">+ Add Money to Wallet</button>
+            </div>
+            <div class="wallet-balance">
+                <h3>$1550.56</h3>
+                <p> Wallet Balance</p>
             </div>
         </section>
     </main>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <footer>
+        <p>&copy; 2024 EZpay. All rights reserved.</p>
+    </footer>
 
     <script>
         function updateBalance() {
@@ -54,8 +62,6 @@
             document.getElementById('balance-display').textContent = `$${newBalance}`;
         }
     </script>
-<footer>
-    <p>&copy; 2024 EZpay. All rights reserved.</p>
-</footer>
 </body>
 </html>
+
