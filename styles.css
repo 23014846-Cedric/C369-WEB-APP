@@ -290,7 +290,7 @@ section {
 
 .contact-us-container {
     max-width: 700px;
-    margin: 20px auto;
+    margin: 50px auto;
     padding: 20px;
     background: #34495e;
     border-radius: 8px;
@@ -305,7 +305,7 @@ section {
 
 .contact-us-form input,
 .contact-us-form textarea {
-    width: 100%;
+    width: 98%;
     padding: 12px;
     margin-bottom: 15px;
     border: 1px solid #7f8c8d;
