@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EZpay - Transactions</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .highlight-red {
+            background-color: #f8d7da; /* Light red background */
+            color: #721c24; /* Dark red text */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -50,11 +56,18 @@
     
             transactions.forEach((transaction, index) => {
                 const currencyCode = transaction.currency || "";
+                const amount = parseFloat(transaction.amount);
                 const transactionRow = document.createElement('tr');
+
+                // Highlight row in red if amount is 10,000 or above
+                if (amount >= 10000) {
+                    transactionRow.classList.add('highlight-red');
+                }
+
                 transactionRow.innerHTML = `
                     <td>${transaction.date}</td>
                     <td>${transaction.userId}</td>
-                    <td>${currencyCode} ${transaction.amount}</td>
+                    <td>${currencyCode} ${amount.toLocaleString()}</td>
                     <td>${transaction.description}</td>
                     <td><button onclick="deleteTransaction(${index})">Clear</button></td>
                 `;
@@ -71,9 +84,9 @@
     
         window.onload = loadTransactions;
     </script>
-<footer>
-    <p>&copy; 2024 EZpay. All rights reserved.</p>
-</footer>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <footer>
+        <p>&copy; 2024 EZpay. All rights reserved.</p>
+    </footer>
 </body>
 </html>
-

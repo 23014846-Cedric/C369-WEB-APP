@@ -22,20 +22,43 @@
         <section class="contact-us-section">
             <div class="contact-us-container">
                 <h2>Contact Us</h2>
-                <form class="contact-us-form">
+                <form class="contact-us-form" onsubmit="handleSubmit(event)">
                     <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Enter your name">
+                    <input type="text" id="name" placeholder="Enter your name" required>
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter your email">
+                    <input type="email" id="email" placeholder="Enter your email" required>
                     <label for="message">Message</label>
-                    <textarea id="message" rows="5" placeholder="Enter your message"></textarea>
-                    <button type="button">Submit</button>
+                    <textarea id="message" rows="5" placeholder="Enter your message" required></textarea>
+                    <button type="submit">Submit</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <script src="script.js"></script>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the form from submitting in the traditional way
+            
+            // Get the values from the form inputs
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Create a message to display in the alert popup
+            const confirmationMessage = `Thank you for contacting us!\n\n` +
+                                        `Here are the details you submitted:\n` +
+                                        `Name: ${name}\n` +
+                                        `Email: ${email}\n` +
+                                        `Message: ${message}`;
+
+            // Display the alert popup with the submitted details
+            alert(confirmationMessage);
+
+            // Optionally, you can reset the form after submission
+            document.querySelector('.contact-us-form').reset();
+        }
+    </script>
+
     <footer>
         <p>&copy; 2024 EZpay. All rights reserved.</p>
     </footer>

@@ -215,7 +215,7 @@ section {
 
 .send-money-container {
     max-width: 700px;
-    margin: 20px auto;
+    margin: 25px auto;
     padding: 20px;
     background: #34495e;
     border-radius: 8px;
@@ -230,7 +230,7 @@ section {
 
 .send-money-form input,
 .send-money-form select {
-    width: 100%;
+    width: 98%;
     padding: 12px;
     margin-bottom: 15px;
     border: 1px solid #7f8c8d;

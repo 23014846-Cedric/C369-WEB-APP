@@ -126,11 +126,12 @@
                     </select>
                     <label for="receiver-username">Receiver Username</label>
                     <input type="text" id="receiver-username" placeholder="Enter receiver's username" required>
+                    <br>
+                    <label for="enteredRandomNumber">Enter OTP</label>
                     <div class="form-group">
-                        <button type="button" class="btn btn-secondary" onclick="generateRandomNumber()">Generate Random Number</button>
+                        <button type="button" class="btn btn-secondary" onclick="generateRandomNumber()">Generate OTP</button>
                     </div>
                     <br>
-                    <label for="enteredRandomNumber">Enter Random Number</label>
                     <input type="text" id="enteredRandomNumber" placeholder="Enter the random number" required>
                     <button type="submit" class="btn btn-primary">Send Money</button>
                 </form>
@@ -166,7 +167,7 @@
                 userId: receiverUsername,
                 amount: sendAmount,
                 currency: currency,
-                description: `Remmitance ${selectCard}`
+                description: `Remmitance`
             };
 
             let transactions = JSON.parse(localStorage.getItem('transactions')) || [];
