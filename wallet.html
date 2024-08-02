@@ -9,14 +9,19 @@
 <body>
     <header>
         <nav>
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="wallet.html" class="nav-link active">Wallet</a>
-            <a href="send-money.html" class="nav-link">Remittance</a>
-            <a href="payment.html" class="nav-link">Payment</a>
-            <a href="transactions.html" class="nav-link">Transactions</a>
-            <a href="contact.html" class="nav-link">Contact</a>
-            <a href="features.html" class="nav-link">Features</a>
-        </nav>
+            <div class="nav-left">
+                <a href="index.html" class="nav-link">Home</a>
+            </div>
+            <div class="nav-center">
+                <a href="wallet.html" class="nav-link">Wallet</a>
+                <a href="send-money.html" class="nav-link">Remittance</a>
+                <a href="payment.html" class="nav-link">Payment</a>
+                <a href="receive.html" class="nav-link">Receive Payment</a>
+                <a href="transactions.html" class="nav-link">Transactions</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="features.html" class="nav-link">Features</a>
+            </div>
+            </nav>
     </header>
 
     <main>
@@ -25,7 +30,7 @@
             <div class="profile-section">
                 <img src="images\Creditcard.png" alt="credit card">
                 <h3>Balance</h3>
-                <p>$1550.56</p>
+                <p id="balance-display">$1550.56</p>
             </div>
             <nav class="sidebar-nav">
                 <ul>
@@ -33,6 +38,7 @@
                     <li><a href="send-money.html">Remmit Money</a></li>
                     <li><a href="wallet.html">Wallet</a></li>
                     <li><a href="transactions.html">History</a></li>
+                    <li><a href="receive.html">Receive Payment</a></li>
                 </ul>
             </nav>
         </aside>
@@ -41,27 +47,28 @@
         <section class="wallet-section">
             <div class="wallet-header">
                 <h2>Wallet</h2>
-                <button class="add-money">+ Add Money to Wallet</button>
+                <button class="add-money" onclick="window.location.href='topup.html'">+ Add Money to Wallet</button>
             </div>
             <div class="wallet-balance">
-                <h3>$1550.56</h3>
+                <h3 id="wallet-balance">$1550.56</h3>
                 <p> Wallet Balance</p>
             </div>
         </section>
     </main>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
     <footer>
         <p>&copy; 2024 EZpay. All rights reserved.</p>
     </footer>
 
     <script>
-        function updateBalance() {
-            const cardSelect = document.getElementById('card-select');
-            const selectedOption = cardSelect.options[cardSelect.selectedIndex];
-            const newBalance = selectedOption.getAttribute('data-balance');
-            document.getElementById('balance-display').textContent = `$${newBalance}`;
+        // Update wallet balance on page load
+        window.onload = function() {
+            const balanceDisplay = document.getElementById('wallet-balance');
+            const storedBalance = localStorage.getItem('walletBalance');
+            if (storedBalance) {
+                balanceDisplay.textContent = `$${storedBalance}`;
+            }
         }
     </script>
 </body>
 </html>
-

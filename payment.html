@@ -9,17 +9,42 @@
 <body>
     <header>
         <nav>
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="wallet.html" class="nav-link">Wallet</a>
-            <a href="send-money.html" class="nav-link">Remmitance</a>
-            <a href="payment.html" class="nav-link active">Payment</a>
-            <a href="transactions.html" class="nav-link">Transactions</a>
-            <a href="contact.html" class="nav-link">Contact</a>
-            <a href="features.html" class="nav-link">Features</a>
-        </nav>
+            <div class="nav-left">
+                <a href="index.html" class="nav-link">Home</a>
+            </div>
+            <div class="nav-center">
+                <a href="wallet.html" class="nav-link">Wallet</a>
+                <a href="send-money.html" class="nav-link">Remmitance</a>
+                <a href="payment.html" class="nav-link active">Payment</a>
+                <a href="receive.html" class="nav-link active">Receive Payment</a>
+                <a href="transactions.html" class="nav-link">Transactions</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="features.html" class="nav-link">Features</a>
+            </div>
+            </nav>
     </header>
 
     <main>
+
+        <!-- Sidebar Section -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <img src="images\Creditcard.png" alt="credit card">
+                <h3>Balance</h3>
+                <p>$1550.56</p>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="profile.html">Profile</a></li>
+                    <li><a href="send-money.html">Remmit Money</a></li>
+                    <li><a href="wallet.html">Wallet</a></li>
+                    <li><a href="transactions.html">History</a></li>
+                    <li><a href="receive.html">Receive Payment</a></li>
+
+                </ul>
+            </nav>
+        </aside>
+
         <!-- Payment Section -->
         <section class="payment-section">
             <div class="payment-container">
@@ -142,6 +167,8 @@
 
                     <button type="submit">Submit Payment</button>
                 </form>
+                <p><a href="receive.html" style="color: black;">Receive Payment From Others</a></p>
+
             </div>
         </section>
     </main>

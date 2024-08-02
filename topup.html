@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZpay - Top Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="index.html" class="nav-link">Home</a>
+            </div>
+            <div class="nav-center">
+                <a href="wallet.html" class="nav-link">Wallet</a>
+                <a href="send-money.html" class="nav-link">Remittance</a>
+                <a href="payment.html" class="nav-link">Payment</a>
+                <a href="receive.html" class="nav-link">Receive Payment</a>
+                <a href="transactions.html" class="nav-link">Transactions</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="features.html" class="nav-link">Features</a>
+            </div>
+            </nav>
+    </header>
+
+    <main>
+        <section class="topup-section">
+            <div class="topup-container">
+                <h2>Top Up Your Wallet</h2>
+                <form id="topup-form">
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+                    <button type="submit"><a href="wallet.html">Add Money </a></button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <footer>
+        <p>&copy; 2024 EZpay. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('topup-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+
+            // Assume you send the form data to the server and it updates the wallet balance successfully
+            // Here, you should include code to handle the form submission, e.g., sending an AJAX request
+
+            // For simplicity, we’ll use localStorage to simulate updating the balance
+            const amount = parseFloat(document.getElementById('amount').value);
+            if (!isNaN(amount) && amount > 0) {
+                // Get the current balance from localStorage or initialize to 0 if not present
+                let currentBalance = parseFloat(localStorage.getItem('walletBalance')) || 0;
+                // Update the balance
+                currentBalance += amount;
+                // Save the new balance to localStorage
+                localStorage.setItem('walletBalance', currentBalance.toFixed(2));
+
+                // Redirect back to the wallet page
+                window.location.href = 'wallet.html';
+            }
+        });
+    </script>
+</body>
+</html>
