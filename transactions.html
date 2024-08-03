@@ -27,17 +27,16 @@
                 <a href="contact.html" class="nav-link">Contact</a>
                 <a href="features.html" class="nav-link">Features</a>
             </div>
-            </nav>
+        </nav>
     </header>
 
     <main>
-
         <!-- Sidebar Section -->
         <aside class="sidebar">
             <div class="profile-section">
                 <img src="images\Creditcard.png" alt="credit card">
                 <h3>Balance</h3>
-                <p>$1550.56</p>
+                <p id="sidebar-balance">$1550.56</p>
             </div>
             <nav class="sidebar-nav">
                 <ul>
@@ -49,7 +48,6 @@
                 </ul>
             </nav>
         </aside>     
-
 
         <!-- Transaction History Section -->
         <section class="transaction-history-section">
@@ -80,8 +78,8 @@
             transactionTableBody.innerHTML = '';
     
             transactions.forEach((transaction, index) => {
-                const currencyCode = transaction.currency || "";
-                const amount = parseFloat(transaction.amount);
+                const currencyCode = transaction.currency || "USD";
+                const amount = parseFloat(transaction.amount).toFixed(2);
                 const transactionRow = document.createElement('tr');
 
                 // Highlight row in red and update description if amount is 10,000 or above
@@ -111,9 +109,20 @@
             loadTransactions();
         }
     
-        window.onload = loadTransactions;
+        function updateSidebarBalance() {
+            const storedBalance = localStorage.getItem('walletBalance');
+            const sidebarBalanceElement = document.getElementById('sidebar-balance');
+            if (storedBalance) {
+                sidebarBalanceElement.textContent = `$${parseFloat(storedBalance).toFixed(2)}`;
+            }
+        }
+
+        window.onload = function() {
+            loadTransactions();
+            updateSidebarBalance();
+        };
     </script>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+     <br><br><br><br><br><br><br><br><br> 
     <footer>
         <p>&copy; 2024 EZpay. All rights reserved.</p>
     </footer>

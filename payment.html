@@ -14,33 +14,31 @@
             </div>
             <div class="nav-center">
                 <a href="wallet.html" class="nav-link">Wallet</a>
-                <a href="send-money.html" class="nav-link">Remmitance</a>
+                <a href="send-money.html" class="nav-link">Remittance</a>
                 <a href="payment.html" class="nav-link active">Payment</a>
-                <a href="receive.html" class="nav-link active">Receive Payment</a>
+                <a href="receive.html" class="nav-link">Receive Payment</a>
                 <a href="transactions.html" class="nav-link">Transactions</a>
                 <a href="contact.html" class="nav-link">Contact</a>
                 <a href="features.html" class="nav-link">Features</a>
             </div>
-            </nav>
+        </nav>
     </header>
 
     <main>
-
         <!-- Sidebar Section -->
         <aside class="sidebar">
             <div class="profile-section">
-                <img src="images\Creditcard.png" alt="credit card">
+                <img src="images/Creditcard.png" alt="credit card">
                 <h3>Balance</h3>
-                <p>$1550.56</p>
+                <p id="wallet-balance">$180.00</p> <!-- Initial balance display -->
             </div>
             <nav class="sidebar-nav">
                 <ul>
                     <li><a href="profile.html">Profile</a></li>
-                    <li><a href="send-money.html">Remmit Money</a></li>
+                    <li><a href="send-money.html">Remittance</a></li>
                     <li><a href="wallet.html">Wallet</a></li>
                     <li><a href="transactions.html">History</a></li>
                     <li><a href="receive.html">Receive Payment</a></li>
-
                 </ul>
             </nav>
         </aside>
@@ -81,83 +79,19 @@
                         <option value="HKD">Hong Kong Dollar (HKD)</option>
                         <option value="NOK">Norwegian Krone (NOK)</option>
                         <option value="KRW">South Korean Won (KRW)</option>
-                        <option value="TRY">Turkish Lira (TRY)</option>
-                        <option value="RUB">Russian Ruble (RUB)</option>
-                        <option value="INR">Indian Rupee (INR)</option>
-                        <option value="BRL">Brazilian Real (BRL)</option>
-                        <option value="ZAR">South African Rand (ZAR)</option>
-                        <option value="DKK">Danish Krone (DKK)</option>
-                        <option value="PLN">Polish Zloty (PLN)</option>
-                        <option value="THB">Thai Baht (THB)</option>
-                        <option value="HUF">Hungarian Forint (HUF)</option>
-                        <option value="ILS">Israeli New Shekel (ILS)</option>
-                        <option value="CLP">Chilean Peso (CLP)</option>
-                        <option value="COP">Colombian Peso (COP)</option>
-                        <option value="PHP">Philippine Peso (PHP)</option>
-                        <option value="AED">United Arab Emirates Dirham (AED)</option>
-                        <option value="SAR">Saudi Riyal (SAR)</option>
-                        <option value="MYR">Malaysian Ringgit (MYR)</option>
-                        <option value="RSD">Serbian Dinar (RSD)</option>
-                        <option value="MAD">Moroccan Dirham (MAD)</option>
-                        <option value="BHD">Bahraini Dinar (BHD)</option>
-                        <option value="JOD">Jordanian Dinar (JOD)</option>
-                        <option value="KWD">Kuwaiti Dinar (KWD)</option>
-                        <option value="QAR">Qatari Rial (QAR)</option>
-                        <option value="OMR">Omani Rial (OMR)</option>
-                        <option value="LKR">Sri Lankan Rupee (LKR)</option>
-                        <option value="VND">Vietnamese Dong (VND)</option>
-                        <option value="TWD">New Taiwan Dollar (TWD)</option>
-                        <option value="NPR">Nepalese Rupee (NPR)</option>
-                        <option value="MUR">Mauritian Rupee (MUR)</option>
-                        <option value="ISK">Icelandic Króna (ISK)</option>
-                        <option value="PEN">Peruvian Nuevo Sol (PEN)</option>
-                        <option value="TZS">Tanzanian Shilling (TZS)</option>
-                        <option value="ETB">Ethiopian Birr (ETB)</option>
-                        <option value="UGX">Ugandan Shilling (UGX)</option>
-                        <option value="XOF">West African CFA Franc (XOF)</option>
-                        <option value="XAF">Central African CFA Franc (XAF)</option>
-                        <option value="KZT">Kazakhstani Tenge (KZT)</option>
-                        <option value="MDL">Moldovan Leu (MDL)</option>
-                        <option value="LTL">Lithuanian Litas (LTL)</option>
-                        <option value="LVL">Latvian Lats (LVL)</option>
-                        <option value="AZN">Azerbaijani Manat (AZN)</option>
-                        <option value="GEL">Georgian Lari (GEL)</option>
-                        <option value="HNL">Honduran Lempira (HNL)</option>
-                        <option value="KGS">Kyrgyzstani Som (KGS)</option>
-                        <option value="XPF">CFP Franc (XPF)</option>
-                        <option value="JMD">Jamaican Dollar (JMD)</option>
-                        <option value="BBD">Barbadian Dollar (BBD)</option>
-                        <option value="BND">Brunei Dollar (BND)</option>
-                        <option value="GHS">Ghanaian Cedi (GHS)</option>
-                        <option value="AFN">Afghan Afghani (AFN)</option>
-                        <option value="AMD">Armenian Dram (AMD)</option>
-                        <option value="BAM">Bosnia and Herzegovina Convertible Mark (BAM)</option>
-                        <option value="CDF">Congolese Franc (CDF)</option>
-                        <option value="DOP">Dominican Peso (DOP)</option>
-                        <option value="EGP">Egyptian Pound (EGP)</option>
-                        <option value="FJD">Fijian Dollar (FJD)</option>
-                        <option value="GNF">Guinean Franc (GNF)</option>
-                        <option value="KPW">North Korean Won (KPW)</option>
-                        <option value="KYD">Cayman Islands Dollar (KYD)</option>
-                        <option value="LBP">Lebanese Pound (LBP)</option>
-                        <option value="MKD">Macedonian Denar (MKD)</option>
-                        <option value="MNT">Mongolian Tugrik (MNT)</option>
-                        <option value="NAD">Namibian Dollar (NAD)</option>
-                        <option value="PYG">Paraguayan Guarani (PYG)</option>
-                        <option value="RWF">Rwandan Franc (RWF)</option>
-                        <option value="SBD">Solomon Islands Dollar (SBD)</option>
-                        <option value="SRD">Surinamese Dollar (SRD)</option>
-                        <option value="SSP">South Sudanese Pound (SSP)</option>
-                        <option value="SYP">Syrian Pound (SYP)</option>
-                        <option value="TJS">Tajikistani Somoni (TJS)</option>
-                        <option value="TMT">Turkmenistani Manat (TMT)</option>
-                        <option value="UAH">Ukrainian Hryvnia (UAH)</option>
-                        <option value="UZS">Uzbekistani Som (UZS)</option>
-                        <option value="ZWL">Zimbabwean Dollar (ZWL)</option>
                     </select>
                     
                     <label for="description">Description:</label>
                     <p id="description" class="description">Payment</p>
+                    <br>
+                    <!-- Google Maps Static API Image -->
+                    <label for="map-location">Recipient Location:</label>
+                    <div class="map-container">
+                        <!-- Example coordinates for San Francisco. Replace with actual recipient location coordinates -->
+                        <a href="https://www.google.com/maps/search/?api=1&query=37.7749,-122.4194" target="_blank">
+                            <img src="C:\Users\23014846\Downloads\C369\GA folder\Project Web app\images\google.jpg" alt="Google Maps Image" id="map-image">
+                        </a>
+                    </div>
                     <br>
                     <button type="button" onclick="generateAndShowCode()">Generate Code</button>
                     <br>
@@ -168,13 +102,16 @@
                     <button type="submit">Submit Payment</button>
                 </form>
                 <p><a href="receive.html" style="color: black;">Receive Payment From Others</a></p>
-
             </div>
         </section>
     </main>
 
     <script>
         let generatedCode = ''; // Variable to store the generated code
+        let currentBalance = parseFloat(localStorage.getItem('balance')) || 180.00; // Default to $180.00
+
+        // Display the current balance on page load
+        document.getElementById('wallet-balance').textContent = `$${currentBalance.toFixed(2)}`;
 
         // Function to generate and display a random number
         function generateAndShowCode() {
@@ -188,11 +125,11 @@
             event.preventDefault();
 
             const recipient = document.getElementById('recipient').value;
-            const amount = parseFloat(document.getElementById('amount').value);
+            const amount = parseFloat(document.getElementById('amount').value).toFixed(2);
             const currency = document.getElementById('currency').value;
             const description = document.getElementById('description').textContent;
             const enteredCode = document.getElementById('verification-code').value;
-            const date = new Date().toLocaleDateString();
+            const date = new Date().toLocaleString();
 
             // Check if the entered verification code matches the generated code
             if (enteredCode !== generatedCode) {
@@ -202,10 +139,23 @@
                 return;
             }
 
+            // Check if the balance is sufficient
+            if (amount > currentBalance) {
+                alert('Insufficient balance. Please enter a lower amount.');
+                return;
+            }
+
             // Show confirmation popup
-            const confirmMessage = `Are you sure you want to make a payment of ${currency} ${amount.toFixed(2)} to ${recipient}?`;
+            const confirmMessage = `Are you sure you want to make a payment of ${currency} ${amount} to ${recipient}?`;
             if (confirm(confirmMessage)) {
                 if (recipient && amount && description) {
+                    // Deduct the amount from the current balance
+                    currentBalance -= parseFloat(amount);
+                    localStorage.setItem('balance', currentBalance.toFixed(2)); // Update balance in local storage
+
+                    // Update the displayed balance
+                    document.getElementById('wallet-balance').textContent = `$${currentBalance.toFixed(2)}`;
+
                     // Add the transaction to local storage
                     let transactions = JSON.parse(localStorage.getItem('transactions')) || [];
                     transactions.push({

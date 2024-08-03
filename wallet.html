@@ -21,21 +21,21 @@
                 <a href="contact.html" class="nav-link">Contact</a>
                 <a href="features.html" class="nav-link">Features</a>
             </div>
-            </nav>
+        </nav>
     </header>
 
     <main>
         <!-- Sidebar Section -->
         <aside class="sidebar">
             <div class="profile-section">
-                <img src="images\Creditcard.png" alt="credit card">
+                <img src="images/Creditcard.png" alt="credit card">
                 <h3>Balance</h3>
-                <p id="balance-display">$1550.56</p>
+                <p id="balance-display">$0.00</p>
             </div>
             <nav class="sidebar-nav">
                 <ul>
                     <li><a href="profile.html">Profile</a></li>
-                    <li><a href="send-money.html">Remmit Money</a></li>
+                    <li><a href="send-money.html">Remit Money</a></li>
                     <li><a href="wallet.html">Wallet</a></li>
                     <li><a href="transactions.html">History</a></li>
                     <li><a href="receive.html">Receive Payment</a></li>
@@ -50,8 +50,8 @@
                 <button class="add-money" onclick="window.location.href='topup.html'">+ Add Money to Wallet</button>
             </div>
             <div class="wallet-balance">
-                <h3 id="wallet-balance">$1550.56</h3>
-                <p> Wallet Balance</p>
+                <h3 id="wallet-balance">$0.00</h3>
+                <p>Wallet Balance</p>
             </div>
         </section>
     </main>
@@ -63,12 +63,13 @@
     <script>
         // Update wallet balance on page load
         window.onload = function() {
-            const balanceDisplay = document.getElementById('wallet-balance');
-            const storedBalance = localStorage.getItem('walletBalance');
-            if (storedBalance) {
-                balanceDisplay.textContent = `$${storedBalance}`;
-            }
+            const storedBalance = parseFloat(localStorage.getItem('walletBalance')) || 0;
+
+            // Update balance in both the sidebar and main wallet section
+            document.getElementById('balance-display').textContent = `$${storedBalance.toFixed(2)}`;
+            document.getElementById('wallet-balance').textContent = `$${storedBalance.toFixed(2)}`;
         }
     </script>
 </body>
 </html>
+

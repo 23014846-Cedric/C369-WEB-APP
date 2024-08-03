@@ -44,11 +44,7 @@
     <script>
         document.getElementById('topup-form').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form from submitting normally
-
-            // Assume you send the form data to the server and it updates the wallet balance successfully
-            // Here, you should include code to handle the form submission, e.g., sending an AJAX request
-
-            // For simplicity, we’ll use localStorage to simulate updating the balance
+    
             const amount = parseFloat(document.getElementById('amount').value);
             if (!isNaN(amount) && amount > 0) {
                 // Get the current balance from localStorage or initialize to 0 if not present
@@ -57,9 +53,11 @@
                 currentBalance += amount;
                 // Save the new balance to localStorage
                 localStorage.setItem('walletBalance', currentBalance.toFixed(2));
-
+    
                 // Redirect back to the wallet page
                 window.location.href = 'wallet.html';
+            } else {
+                alert("Please enter a valid amount.");
             }
         });
     </script>
