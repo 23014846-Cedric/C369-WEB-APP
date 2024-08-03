@@ -30,7 +30,7 @@
             <div class="profile-section">
                 <img src="images/Creditcard.png" alt="credit card">
                 <h3>Balance</h3>
-                <p id="wallet-balance">$180.00</p> <!-- Initial balance display -->
+                <p id="balance">$190.00</p> <!-- Initial balance display -->
             </div>
             <nav class="sidebar-nav">
                 <ul>
@@ -111,7 +111,7 @@
         let currentBalance = parseFloat(localStorage.getItem('balance')) || 180.00; // Default to $180.00
 
         // Display the current balance on page load
-        document.getElementById('wallet-balance').textContent = `$${currentBalance.toFixed(2)}`;
+        document.getElementById('balance').textContent = `$${currentBalance.toFixed(2)}`;
 
         // Function to generate and display a random number
         function generateAndShowCode() {
@@ -154,7 +154,7 @@
                     localStorage.setItem('balance', currentBalance.toFixed(2)); // Update balance in local storage
 
                     // Update the displayed balance
-                    document.getElementById('wallet-balance').textContent = `$${currentBalance.toFixed(2)}`;
+                    document.getElementById('balance').textContent = `$${currentBalance.toFixed(2)}`;
 
                     // Add the transaction to local storage
                     let transactions = JSON.parse(localStorage.getItem('transactions')) || [];

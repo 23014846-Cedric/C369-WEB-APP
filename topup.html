@@ -21,7 +21,7 @@
                 <a href="contact.html" class="nav-link">Contact</a>
                 <a href="features.html" class="nav-link">Features</a>
             </div>
-            </nav>
+        </nav>
     </header>
 
     <main>
@@ -31,12 +31,12 @@
                 <form id="topup-form">
                     <label for="amount">Amount:</label>
                     <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
-                    <button type="submit"><a href="wallet.html">Add Money </a></button>
+                    <button type="submit">Add Money</button>
                 </form>
             </div>
         </section>
     </main>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br> 
     <footer>
         <p>&copy; 2024 EZpay. All rights reserved.</p>
     </footer>
@@ -53,6 +53,9 @@
                 currentBalance += amount;
                 // Save the new balance to localStorage
                 localStorage.setItem('walletBalance', currentBalance.toFixed(2));
+    
+                // Notify the user
+                alert("Your wallet has been successfully topped up.");
     
                 // Redirect back to the wallet page
                 window.location.href = 'wallet.html';
